@@ -1,0 +1,22 @@
+<div class="col-md-12 header-title" id="landing-img">
+    <div class="container-fluid">
+      <h1 class="logo" id="site-title">UnLock</h1>
+      <h2 class="tag-line header-title-hgroup" id="tagline">Get Help from Coding Mentor instantly.</h2>
+    </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row text center col-xs-6">
+    <% @user.each do |u| %>
+      <div class="well row animated bounceInUp">
+        <div class="col-xs-8">
+        <img src="<%= u.image %>" class="img-responsive img-circle" width="90px"/>
+          <h4><%= u.username %><h4>
+          <p><%= u.info %></p>
+        </div>
+    </div>
+<% end %>
+</div>
+</div>
+
+

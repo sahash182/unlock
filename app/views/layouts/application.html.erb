@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unlock</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= asset_path"logo.png"  %>">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default" id="nav">
+    <!-- <div class="container-fluid"> -->
+      <div class="navbar-header">
+        <header> 
+          <%= link_to root_path  do %>
+            
+          <img src=<%= asset_path"logo.png" %> class="margin-lt" width="40px">
+          <% end %>
+        </header>
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav pull-left">
+            <% if current_user %> 
+             <li> <%= link_to "Profile", user_path(current_user), class: "profile" %></li>
+            <% end %>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+            <% if current_user %> 
+              <h3> Welcome <%= current_user.username %>&nbsp;&nbsp;<%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-success" %></h3> 
+            <% else %> 
+              <p><%= link_to "Sign Up", signup_path , class: "btn btn-primary" %>&nbsp;&nbsp;<%= link_to "Log In", login_path , class: "btn btn-primary" %></p>
+            <% end %> 
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    <!-- </div>/.container-fluid -->
+  </nav>
+  <%= yield %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
+
