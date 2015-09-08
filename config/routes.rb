@@ -8,6 +8,8 @@ Rails.application.routes.draw do
  get "/users/:id", to: "users#show", as: 'profile'
 
  put "/status", to: "users#status"
+ put "/ping", to: "socket#ping"
+ put "/pong", to: "socket#pong"
 
  resources :users, only: [:create, :edit, :update, :show]
 

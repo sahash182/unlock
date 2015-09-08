@@ -11,10 +11,11 @@
       <div class="well row animated bounceInUp">
         <div class="col-xs-8">
         <img src="<%= u.image %>" class="img-responsive img-circle" width="90px"/>
-          <h4><%= u.username %><h4>
+          <h3><%= u.username %><h3>
           <p><%= u.info %></p>
+           
           <div class="pull right">
-
+            <%= link_to "View Mentor", user_path(u), class: "btn btn-info" %>
           </div>
         </div>
     </div>

@@ -17,10 +17,11 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@current_user = User.find(params[:id]) 
-    p(@current_user)
-    render :show
-
+    if current_user
+      @user = current_user
+    else
+      @user = User.find(params[:id]) 
+    end
   end
 
   def edit
@@ -36,7 +37,7 @@ class UsersController < ApplicationController
   end
 
   def status
-    
+
     @user = current_user
     if status_params[:status]
       @user.update_attributes(status_params)

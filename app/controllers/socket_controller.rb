@@ -1,6 +1,6 @@
 class SocketController < ApplicationController
 	def ping
-		student = User.find(params[:id])
+		user = User.find(params[:id])
 		PrivatePub.publish_to("/profile/badge/#{params[:ins_id]}", "gapi.hangout.render('hangout', { 'render': 'createhangout', 'invites': [{'id': '#{student.email}', 'invite_type': 'EMAIL' }] });")
 		PrivatePub.publish_to("/profile/badge/#{params[:ins_id]}", "alert('#{student.username} would like you to teach!')")
 		PrivatePub.publish_to("/profile/badge/#{params[:ins_id]}", "$('.hangout-link').show()")

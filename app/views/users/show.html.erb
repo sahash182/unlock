@@ -1,29 +1,26 @@
 <div class="container">
 	<div class="row">    
-		<div class="col-sm-3">
-				<img src="<%= @current_user.image %>" class="img-responsive img-circle" width="200px"/>
-				<div class= "container-fluid" id="user_info">
-				<h2>Hi, <%= @current_user.username %></h2>
-				<h5>Member since:<br> <%= localize(@current_user.created_at, :format => '%m/%d/%Y') %></h5>
-
-				<% if @current_user.id == session[:user_id] %>
-				 <%= link_to "Edit", edit_user_path(@current_user), class: "btn btn-success" %> 
-				<% end %>
-			</div> 
-
-		</div>
-			<div class="col-sm-8">
-				<div>
+		<div class="col-sm-6">
+			<img src="<%= @user.image %>" class="img-responsive img-circle" width="200px"/>
+			<div class= "container-fluid" id="user_info">
+				<h2><%= @user.username %></h2>
+				<h2><%= @user.email %></h2>
+				<h4>Status: 
 				<a href="javascript:void(0)" class="status">
-					
-					<% if current_user.status == "nil" || current_user.status == nil %>
+					<% if @user.status == "active" %>
 					<span class="btn btn-success touch">online</span>
 					<% else %>
 					<span class="btn btn-danger touch">offline</span>
-					<% end %>
+					<% end %> 
 				</a>
-			</div>
-				
+				</h4>
+				<h4>Description : <%= @user.info %></h4>
+				<h5>Member since:<br> <%= localize(@user.created_at, :format => '%m/%d/%Y') %></h5>
+				<% if @user.id == session[:user_id] %>
+				<%= link_to "Edit Profile", edit_user_path(@user), class: "btn" if current_user.present? %> 
+				<% end %><br>
+				<script src="https://apis.google.com/js/platform.js" async defer></script>
+				<g:hangout render="createhangout"></g:hangout>
 			</div>
 		</div>
 	</div>
