@@ -1,7 +1,8 @@
 class SiteController < ApplicationController
   def index
-  	@user = User.all
-  	render :index
+
+  		@user = User.where(status: 'active')
+  		render :index
   	
   end
 end

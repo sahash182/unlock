@@ -13,6 +13,16 @@
 
 		</div>
 			<div class="col-sm-8">
+				<div>
+				<a href="javascript:void(0)" class="status">
+					
+					<% if current_user.status == "nil" || current_user.status == nil %>
+					<span class="btn btn-success touch">online</span>
+					<% else %>
+					<span class="btn btn-danger touch">offline</span>
+					<% end %>
+				</a>
+			</div>
 				
 			</div>
 		</div>

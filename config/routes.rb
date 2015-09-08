@@ -7,6 +7,8 @@ Rails.application.routes.draw do
  get "/signup", to: "users#new"
  get "/users/:id", to: "users#show", as: 'profile'
 
+ put "/status", to: "users#status"
+
  resources :users, only: [:create, :edit, :update, :show]
 
  # Sessions routes

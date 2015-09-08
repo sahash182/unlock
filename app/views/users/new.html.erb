@@ -6,7 +6,12 @@
         <%= content_tag :div, m, class: "#{name} error" %>
       <% end%>
     <% end %>
-
+    <div class="control-group">
+      <%= f.label "Role", class: 'control-label'%><br>
+      <div class='controls'>
+        <%= f.select(:role, options_for_select([['STUDENT', 'STUDENT'], ['MENTOR', 'MENTOR']])) %>
+      </div>
+    </div>
     <%= f.label :username %>:
     <%= f.text_field :username, class:"form-control" %><br />
     <%= f.label :image %>:
