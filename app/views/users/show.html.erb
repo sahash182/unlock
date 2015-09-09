@@ -1,13 +1,13 @@
 <div class="container-fluid" >
 	<div class="row" id="div-profile">    
-		<div class="col-sm-3 col-sm-offset-3 animated slideInRight" id="img-profile">
+		<div class="col-lg-4 col-lg-offset-2 animated slideInRight" id="img-profile">
 			<%= image_tag @user.avatar.url, width: '300px' %><br>
 			<div class="container-fluid" id="hangout">
 				<g:hangout render="createhangout"></g:hangout>
 			</div>
 		</div>
 		<div class="col-sm-4 animated slideInDown" id='user-info'>
-				<h2><%= @user.username %> is
+				<h2 id="username"><%= @user.username %> is
 				<a href="javascript:void(0)" class="status">
 					<% if @user.status == "active" %>
 					<span class="btn btn-success touch">online</span>
