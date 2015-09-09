@@ -1,25 +1,35 @@
-<div class="jumbotron" id="header-jumbotron">
+<div class="jumbotron animated pulse" id="header-jumbotron">
   <div class='container-fluid animated bounceInUp' id='head'>
-    <h2>unlock</h2>
+    <h2 id="font">unlock</h2>
   </div>
   <br>
   <br>
   <br>
   <br>
+  <br>
+  
+
   <div class='container-fluid animated pulse' id='head-tag'>
-    <h2>Your Coding Challanges.</h2>
+    <h2 id="font">Your Coding Challanges.</h2>
   </div>
 </div>
+<legend id="online"><center>online mentors</center></legend>
 <div class="container-fluid">
-  <div class="row col-sm-8 col-sm-offset-2 ">
+  <div class="row col-sm-8 col-sm-offset-2 " id="mentor-info">
     <% @user.each do |u| %>
-      <div class="well row animated bounceInUp">
-        <%= image_tag u.avatar.url(:medium) %>
+      <div class="well  row animated bounceInUp">
+        <div class="col-sm-3">
+          <%= image_tag u.avatar.url(:medium) %>
           <h3><%= u.username %><h3>
+          <%= link_to "Get Help Now", user_path(u), class: "btn btn-info" %>
+        </div>
+        <div class="col-sm-8">
+          <h2>About <%= u.username %>, </h2>
           <h4><%= u.info %></h4>
+        </div>
            
           <div class="pull right">
-            <%= link_to "Get Help Now", user_path(u), class: "btn btn-info" %>
+            
           </div>
     </div>
 <% end %>

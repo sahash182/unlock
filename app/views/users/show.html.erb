@@ -1,9 +1,12 @@
-<div class="container">
-	<div class="row">    
-		<div class="col-sm-6 animated slideInRight">
-			
-			<%= image_tag @user.avatar.url, width: '300px' %>
-			<div class= "container-fluid" id="user_info">
+<div class="container-fluid" >
+	<div class="row" id="div-profile">    
+		<div class="col-sm-3 col-sm-offset-3 animated slideInRight" id="img-profile">
+			<%= image_tag @user.avatar.url, width: '300px' %><br>
+			<div class="container-fluid" id="hangout">
+				<g:hangout render="createhangout"></g:hangout>
+			</div>
+		</div>
+		<div class="col-sm-4 animated slideInDown" id='user-info'>
 				<h2><%= @user.username %> is
 				<a href="javascript:void(0)" class="status">
 					<% if @user.status == "active" %>
@@ -13,14 +16,14 @@
 					<% end %> 
 				</a></h2>
 				<h2><%= @user.email %></h2>
-				<h4>Description : <%= @user.info %></h4>
+				<h4>Description :<br> <%= @user.info %></h4>
 				<h5>Member since:<br> <%= localize(@user.created_at, :format => '%m/%d/%Y') %></h5>
 				<% if @user.id == session[:user_id] %>
 				<%= link_to "Edit Profile", edit_user_path(@user), class: "btn" if current_user.present? %> 
 				<% end %><br>
 				<script src="https://apis.google.com/js/platform.js" async defer></script>
-				<g:hangout render="createhangout"></g:hangout>
-			</div>
+				
 		</div>
+	</div>
 	</div>
 </div><br>

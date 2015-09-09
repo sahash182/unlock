@@ -1,33 +1,88 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url(https://fonts.googleapis.com/css?family=Bitter:700);
+
+legend{
+	color: green;
+	font-weight: bold;
+	z-index: -1;
+}
 body{
-	background-color: #2E2E2E;
+	background-color: #222222;
 }
 .navbar{
 	margin-bottom: 0px;
+	width: 100%;
+	position: fixed;
+	z-index: 2;
 }
 .navbar-nav{
 	margin-top: 5px;
 }
+.btn:hover{
+	background-color: #096509;
+}
 #header-jumbotron{
-	margin-top: 0px;
 	background-image: url('./background.jpeg');
-	height: 400px;
-	background-size: cover;
-
-	
+	height: 450px;
+	background-size: cover;	
+	position: fixed;
+	width: 100%;
+	z-index: -1;
 }
 #head{
 	float: right;
 	color: white;
-	background: rgba(0, 0, 0, 0.4);
+	margin-top: 20px; 
+	background: rgba(255, 255, 255, 0.4);
 	margin-bottom: 0px; 
 	margin-right: 40px;
+	font-weight: bold;
+}
+
+#font{
+	font-family: 'Bitter', serif;
+	color: #1862b5;
 }
 #head-tag{
 	float: right;
 	color: white;
-	background: rgba(0, 0, 0, 0.4); 
-	margin-top: 0px; 
-	margin-right: 40px;
+	background: rgba(255, 255, 255, 0.6); 
+	margin-right: 30px;
+	margin-top:0px;
+	font-weight: bold;
+}
+#user-info{
+	color: white;
+}
+#mentor-info{
+	margin-top: 500px;
+	z-index: 1;
+	opacity: 0.9;
+}
+#brand{
+	margin-left: 100px;
+	color: #2780e3;
+	font-size: 40px;
+	font-weight: bold;
+}
+#brand:hover{
+	color: white;
+}
+#hangout{
+	padding-top: 20px;
+	margin: 0px auto;
+}
+#img-profile{
+	margin-top: 40px;
+}
+#div-profile{
+	z-index: -1;
+	margin-top: 100px;
+}
+#online{
+	margin-top: 465px;
+	position: fixed;
+}
+#form{
+	margin-top: 80px;
 }
 @import "animate.css";

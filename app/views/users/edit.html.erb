@@ -1,18 +1,22 @@
-<div class="col-sm-4 col-sm-offset-4">
+<style>
+body{
+    color: #2780e3;
+}
+</style>
+<div class="col-sm-4 col-sm-offset-4" id='form'>
   <legend>Edit Profile</legend>
   <%= form_for @user do |f| %>
     <%= f.label :username %>:
      <%= f.text_field :username, class:"form-control" %><br />
-     <%= f.label :image %>:
-     <%= f.text_field :image, class:"form-control" %><br />
+     
      <%= f.label :info %>:
      <%= f.text_field :info, class:"form-control" %><br />
-
-     
      <%= f.label :email %>:
      <%= f.email_field :email, class:"form-control" %><br />
      <%= f.label :password %>:
      <%= f.password_field :password, class:"form-control" %><br />
+     <%= f.label :image %>:
+    <%= f.file_field :avatar %><br/>
      <!-- image upload left -->
      <%= f.submit "Save Profile", class:"btn btn-primary" %>
   <% end %>
