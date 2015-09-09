@@ -1,27 +1,27 @@
 <div class="col-sm-4 col-sm-offset-4">
   <legend>Sign Up</legend>
-  <%= form_for @user do |f| %>
+  <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
     <% flash.each do |name, msg| %>
       <% msg.each do |m| %>
         <%= content_tag :div, m, class: "#{name} error" %>
       <% end%>
     <% end %>
     <div class="control-group">
-      <%= f.label "Role :", class: 'control-label'%><br>
+      <%= f.label "Role :", class: 'control-label' %><br>
       <div class='controls'>
-        <%= f.select(:role, options_for_select([['STUDENT', 'STUDENT'], ['MENTOR', 'MENTOR']])) %>
+        <%= f.select(:role, options_for_select([['MENTOR', 'MENTOR'], ['STUDENT', 'STUDENT']])) %>
       </div>
     </div><br>
     <%= f.label :username %>:
     <%= f.text_field :username, class:"form-control" %><br />
-    <%= f.label :image %>:
-    <%= f.text_field :image, class:"form-control" %><br />
     <%= f.label :description %>:
-    <%= f.text_field :info, class:"form-control" %><br />
+    <%= f.text_area :info, class:"form-control" %><br />
     <%= f.label :email %>:
     <%= f.email_field :email, class:"form-control" %><br />
     <%= f.label :password %>:
     <%= f.password_field :password, class:"form-control" %><br />
+    <%= f.label :image %>:
+    <%= f.file_field :avatar %><br/>
      
 
 

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :messages, module: 'chatroom'
+
+  resources :messages, module: 'chatroom'
+
   #root routes
  root "site#index"
 

@@ -3,19 +3,19 @@
 <head>
   <title>Unlock</title>
   <link rel="icon" type="image/png" sizes="16x16" href="<%= asset_path"logo.png"  %>">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cosmo/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default" id="nav">
+<nav class="navbar navbar-default animated slideInDown" id="nav">
     <!-- <div class="container-fluid"> -->
       <div class="navbar-header">
         <header> 
           <%= link_to root_path  do %>
+          <h4>unLocK</h4>
             
-          <img src=<%= asset_path"logo.png" %> class="margin-lt" width="40px">
           <% end %>
         </header>
 

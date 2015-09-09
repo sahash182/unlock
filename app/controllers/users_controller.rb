@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    
     if current_user
       @user = current_user
     else
@@ -55,7 +56,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :status, :image, :info, :role, :password)
+    params.require(:user).permit(:username, :email, :status, :avatar, :info, :role, :password)
   end	
 
   def status_params

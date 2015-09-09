@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-gem "private_pub"
 
-gem "thin"
+gem 'paperclip', '~> 4.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
@@ -45,3 +44,6 @@ group :development, :test do
   gem 'spring'
 end
 
+
+gem 'private_pub', '1.0.3'
+gem 'thin', '1.5.1'
