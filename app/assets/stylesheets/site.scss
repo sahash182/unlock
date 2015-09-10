@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:700);
 @import url(https://fonts.googleapis.com/css?family=Rokkitt);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Philosopher:700);
 legend{
 	color: green;
 	font-weight: bold;
@@ -25,8 +26,14 @@ label{
 .btn:hover{
 	background-color: #096509;
 }
+.btn{
+	font-family: 'Philosopher', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
 #info{
 	font-family: 'Rokkitt', serif;
+	font-size: 25px;
 }
 #username{
 	font-family: 'Bitter', serif;
@@ -48,6 +55,7 @@ label{
 	margin-bottom: 0px; 
 	margin-right: 40px;
 	font-weight: bold;
+	box-shadow: 7px 8px 6px #000000;
 }
 
 #font{
@@ -61,6 +69,7 @@ label{
 	margin-right: 30px;
 	margin-top:0px;
 	font-weight: bold;
+	box-shadow: 7px 8px 6px #000000;
 }
 #user-info{
 	color: white;
