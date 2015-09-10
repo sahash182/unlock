@@ -3,7 +3,7 @@
 		<div class="col-sm-4 col-sm-offset-2 animated slideInRight" id="img-profile">
 			<%= image_tag @user.avatar.url, width: '300px', height: '300px' %><br>
 			<div class="container-fluid" id="hangout">
-				<label>[ Use mentor's email to send invitation ]</label><hr>
+				<label>[ Use mentor's email to Join Hangout ]</label><hr>
 				<g:hangout render="createhangout"></g:hangout><br>
 				<% if @user.id == session[:user_id] %>
 				<%= link_to "Edit Profile", edit_user_path(@user), class: "btn" if current_user.present? %> 
