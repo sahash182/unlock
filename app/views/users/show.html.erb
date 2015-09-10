@@ -4,7 +4,10 @@
 			<%= image_tag @user.avatar.url, width: '300px', height: '300px' %><br>
 			<div class="container-fluid" id="hangout">
 				<label>[ Use mentor's email to send invitation ]</label><hr>
-				<g:hangout render="createhangout"></g:hangout>
+				<g:hangout render="createhangout"></g:hangout><br>
+				<% if @user.id == session[:user_id] %>
+				<%= link_to "Edit Profile", edit_user_path(@user), class: "btn" if current_user.present? %> 
+				<% end %><br>
 			</div>
 		</div>
 		<div class="col-sm-4 animated slideInDown" id='user-info'>
@@ -20,9 +23,6 @@
 				<h3 id="username"><%= @user.email %></h3>
 				<h4 id="info">Description :<br> <%= @user.info %></h4>
 				<h5>Member since:<br> <%= localize(@user.created_at, :format => '%m/%d/%Y') %></h5>
-				<% if @user.id == session[:user_id] %>
-				<%= link_to "Edit Profile", edit_user_path(@user), class: "btn" if current_user.present? %> 
-				<% end %><br>
 				<script src="https://apis.google.com/js/platform.js" async defer></script>
 				
 		</div>
