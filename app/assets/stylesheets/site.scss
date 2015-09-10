@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:700);
-
+@import url(https://fonts.googleapis.com/css?family=Rokkitt);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 legend{
 	color: green;
 	font-weight: bold;
@@ -7,6 +8,10 @@ legend{
 }
 body{
 	background-color: #222222;
+}
+label{
+	color: white;
+	margin-bottom: 0px;
 }
 .navbar{
 	margin-bottom: 0px;
@@ -20,8 +25,12 @@ body{
 .btn:hover{
 	background-color: #096509;
 }
+#info{
+	font-family: 'Rokkitt', serif;
+}
 #username{
 	font-family: 'Bitter', serif;
+	margin-top: 0px;
 }
 #header-jumbotron{
 	background-image: url('http://s15.postimg.org/c5i5lxz96/background.jpg');
@@ -55,6 +64,11 @@ body{
 }
 #user-info{
 	color: white;
+}
+#about{
+	font-family: 'Lobster', cursive;
+	color: #2780e3;
+
 }
 #mentor-info{
 	margin-top: 500px;

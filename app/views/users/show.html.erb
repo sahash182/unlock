@@ -4,6 +4,7 @@
 			<%= image_tag @user.avatar.url, width: '300px' %><br>
 			<div class="container-fluid" id="hangout">
 				<g:hangout render="createhangout"></g:hangout>
+				<label>[ Use mentor's email to send invitation ]</label>
 			</div>
 		</div>
 		<div class="col-sm-4 animated slideInDown" id='user-info'>
@@ -15,8 +16,9 @@
 					<span class="btn btn-danger touch">offline</span>
 					<% end %> 
 				</a></h2>
-				<h2><%= @user.email %></h2>
-				<h4>Description :<br> <%= @user.info %></h4>
+				<label>mentors email:</label>
+				<h3 id="username"><%= @user.email %></h3>
+				<h4 id="info">Description :<br> <%= @user.info %></h4>
 				<h5>Member since:<br> <%= localize(@user.created_at, :format => '%m/%d/%Y') %></h5>
 				<% if @user.id == session[:user_id] %>
 				<%= link_to "Edit Profile", edit_user_path(@user), class: "btn" if current_user.present? %> 

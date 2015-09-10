@@ -10,7 +10,7 @@
   
 
   <div class='container-fluid animated pulse' id='head-tag'>
-    <h2 id="font">Your Coding Challanges.</h2>
+    <h2 id="font">Your Coding Challenges.</h2>
   </div>
 </div>
 <legend id="online"><center>online mentors</center></legend>
@@ -20,17 +20,13 @@
       <div class="well  row animated bounceInUp">
         <div class="col-sm-3">
           <%= image_tag u.avatar.url(:medium) %>
-          <h3><%= u.username %><h3>
-          <%= link_to "Get Help Now", user_path(u), class: "btn btn-info" %>
+          <h3 id="username"><%= u.username %><h3>
+          <%= link_to "Get Help Now", user_path(u), class: "btn btn-success" %>
         </div>
         <div class="col-sm-8">
-          <h2>About <%= u.username %>, </h2>
-          <h4><%= u.info %></h4>
+          <h2 id="about">About <%= u.username %>, </h2>
+          <b><h4 id="info"><%= u.info %></h4></b>
         </div>
-           
-          <div class="pull right">
-            
-          </div>
     </div>
 <% end %>
 </div>
