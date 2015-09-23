@@ -1,28 +1,15 @@
-== README
+Unlock is platform where people with coding challenges will ask help for online mentors and have them solve their challenges. Both student and mentors are directed to google hangout, where mentors can easily share screens and help students with coding challenges.This app is built on Ruby on Rails and Postgres DB.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instructions to have this application running into you local machine.
 
-Things you may want to cover:
+clone repo:
+- git clone https://github.com/sahash182/unlock.git
 
-* Ruby version
+db setup:
+-rake db:migrate
 
-* System dependencies
+local server:
+rails s
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+visit:
+localhost:3000
